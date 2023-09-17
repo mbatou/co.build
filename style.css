@@ -46,16 +46,16 @@
 }
 
 .card {
-    border: solid 3px #343540;
-    background-color: #161b22;
+    border: solid 1px #202846;
+    background-color: #060f27;
     color: white;
     box-shadow: lightsteelblue;
     margin-top: 40px;
 }
 
 .card:hover {
-    background-color: white;
-    color: black !important;
+    background-color: #111832;
+    color: white !important;
 }
 
 .headline-about {
@@ -71,17 +71,20 @@
 .paragraph {
     font-size: 25px;
     margin-top: 30px;
+    color: #7987b1;
 }
 
 .card-talent {
-    border: solid 3px #343540;
+    background-color: #111832;
+    color: white !important;
+    border: solid 1px #343540;
     box-shadow: lightsteelblue;
     margin-top: 40px;
 }
 
 .card-talent:hover {
-    border: solid 3px #343540;
-    background-color: #161b22;
+    border: solid 1px #343540;
+    background-color: #060f27;
     color: white;
     box-shadow: lightsteelblue;
 }
@@ -92,7 +95,7 @@ a {
 
 a:hover {
     color: #343540;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .logo {
@@ -118,7 +121,7 @@ a:hover {
 #changingText {
     /* display: inline-block; */
     overflow: hidden;
-    border-right: 2px solid black;
+    border-right: 2px solid white;
     /* Simulated typing cursor */
     /* white-space: nowrap; */
     animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
@@ -133,31 +136,143 @@ a:hover {
     }
 
     50% {
-        border-color: black;
+        border-color: white;
     }
 }
 
 /* CSS for the fade-in animation */
 .fade-in-section {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Slide down slightly */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(20px);
+    /* Slide down slightly */
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .fade-in-section.fade-in {
-    opacity: 1; /* Faded in */
-    transform: translateY(0); /* Back to normal position */
+    opacity: 1;
+    /* Faded in */
+    transform: translateY(0);
+    /* Back to normal position */
 }
 
 
 /* CSS for the slide-in animation */
 .slide-in-section {
-    opacity: 0; /* Initially hidden */
-    transform: translateX(50px); /* Slide in from the right */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateX(50px);
+    /* Slide in from the right */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .slide-in-section.slide-in {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Back to normal position */
+    opacity: 1;
+    /* Fully visible */
+    transform: translateX(0);
+    /* Back to normal position */
 }
+
+.bg {
+    background-color: #060f27;
+}
+
+.label-form {
+    color: #7987b1;
+    font-size: 18px;
+    margin-top: 32px;
+}
+
+.heading-join {
+    color: white;
+    font-size: 40px;
+    margin-top: 200px;
+}
+
+.description-join {
+    color: #7987b1;
+    font-size: 25px;
+}
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3d405b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 15px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+.form-field {
+    border: solid 1px #202846;
+    background-color: #060f27;
+    color: white;
+    box-shadow: lightsteelblue;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 34px !important;
+    }
+
+    p{
+        font-size: 22px !important;
+    }
+
+    .about-section{
+        visibility:collapse;
+    }
+
+    /* Additional styles for smaller screens */
+}
+
+/* Media query for screens with a minimum width of 1200px */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Additional styles for larger screens */
+}
+
+.messagesubmit{
+    color: lime;
+}
+

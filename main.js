@@ -1,17 +1,3 @@
-// Function to show entrepreneur fields and hide talent fields
-function showEntrepreneurFields() {
-    $('#entrepreneur-fields').show();
-    $('#talent-fields').hide();
-}
-
-// Function to show talent fields and hide entrepreneur fields
-function showTalentFields() {
-    $('#entrepreneur-fields').hide();
-    $('#talent-fields').show();
-}
-
-
-
 // Array of possible text values
 const textOptions = ["Entrepreneur", "Developer", "Manager", "Freelancer", "Student", "Marketer", "Consultant"];
 let currentIndex = 0;
@@ -119,7 +105,5 @@ window.addEventListener('scroll', handleScroll);
 
 // Initial check in case the element is already in the viewport when the page loads
 handleScroll();
-
-
 
 

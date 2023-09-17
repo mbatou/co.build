@@ -12,10 +12,11 @@
 </head>
 
 <body class="bg-gray-100">
-    
-    <button id="backToTopBtn" class="hidden fixed bottom-4 right-4 bg-black text-white px-4 py-2 rounded-full text-lg cursor-pointer">
+
+    <button id="backToTopBtn"
+        class="hidden fixed bottom-4 right-4 bg-black text-white px-4 py-2 rounded-full text-lg cursor-pointer">
         Back to Top
-      </button>
+    </button>
 
     <!-- Navbar -->
     <nav class="navbar p-4">
@@ -23,7 +24,7 @@
             <div class="flex items-center">
                 <!-- Logo (You can replace 'your-logo.png' with your actual logo) -->
                 <!-- <img src="img/cobuild-logo.png" alt="Logo" class="h-14"> -->
-                <span class="text-white ml-2 text-xl logo">Co<span style="color: #282b63;">.</span>Build</span>
+                <span class="text-white ml-2 text-xl logo">Co<span style="color: #7987b1;">.</span>Build</span>
             </div>
             <ul class="flex space-x-4">
                 <li><a href="#home" class="text-white">Home</a></li>
@@ -35,10 +36,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('img/hero-bg-black.png');">
+    <section id="home" class="bg-cover bg-center h-screen relative"
+        style="background-image: url('img/hero-bg-black.png');">
         <div class="container mx-auto flex justify-center items-center h-full">
             <div class="text-center text-white">
-                <h1 class="text-4xl font-bold mb-4 hero-headline">Welcome <span id="changingText">Entrepreneur</span>
+                <h1 class="text-4xl font-bold mb-4 hero-headline">Welcome <span style="color: #7987b1;"
+                        id="changingText">Entrepreneur</span>
                 </h1>
                 <p class="text-lg mb-6 hero-underline">Here is a place for you to share, build, learn and grow.</p>
                 <a href="#join"
@@ -49,12 +52,13 @@
     </section>
 
     <!-- Why CoBuild for Entrepreneurs Section -->
-    <section id="entrepreneurs" class="section-black bg-black py-16 about-section">
+    <section id="entrepreneurs" class="section-black bg py-16 about-section">
         <div class="container mx-auto fade-in-section">
             <h2 class="text-3xl font-semibold text-center text-white mb-8 headline-about">Why <span class="logo">Co<span
-                        style="color: #282b63;">.</span>Build</span> for Entrepreneurs?
+                        style="color: #7987b1;">.</span>Build</span> for Entrepreneurs?
             </h2>
-            <p class="text-lg text-white text-center mb-6 hero-underline">A place for entrepreneurs and talents to
+            <p class="text-lg text-white text-center mb-6 hero-underline" style="color: #7987b1;">A place for
+                entrepreneurs and talents to
                 collaborate on exciting
                 projects.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -80,10 +84,10 @@
         </div>
     </section>
     <!-- Why Join CoBuild as a Talent Section -->
-    <section id="talents" class="section-black py-16 bg-black talent-section">
+    <section id="talents" class="section-black py-16 bg talent-section">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-semibold text-white mb-8 headline-about" style="margin-bottom: 55px;">Why Join
-                <span class="logo">Co<span style="color: #282b63;">.</span>Build</span> as a Talent?
+            <h2 class="text-3xl font-semibold text-white mb-8 headline-about md:mb-4 lg:mb-0 lg:text-center">Why Join
+                <span class="logo">Co<span style="color: #7987b1;">.</span>Build</span> as a Talent?
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <!-- Card 1 -->
@@ -111,128 +115,171 @@
         </div>
     </section>
 
+
     <!-- Join the Community Section -->
-    <section id="join" class="bg-black py-16">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <!-- Image on the Left (occupying 100vh and filling the column) -->
-            <div class="md:w-1/2 h-screen">
-                <img src="img/medium-shot-students-looking-phone.jpg" alt="Join Community Image"
-                    class="w-full h-full object-cover">
+    <section id="join" class="bg py-16">
+        <div class="container mx-auto flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-6">
+                <h2 class="text-3xl font-semibold mb-4 heading-join">Join Our Community</h2>
+                <p class="text-gray-600 description-join">Discover the benefits of being part of our community. Connect
+                    with like-minded individuals, share your knowledge, and stay updated on the latest news and events.
+                </p>
             </div>
-            <!-- Form on the Right (occupying 100vh) -->
-            <div class="md:w-1/2 h-screen bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-semibold mb-4">Join the Community</h2>
-                <form action="#" method="post">
+            <div class="md:w-1/2 p-6 card-talent rounded-lg shadow-lg mt-4 md:mt-0">
+                <form id="myForm" method="POST">
                     <div class="mb-4">
-                        <label for="name" class="block text-gray-800">Name</label>
-                        <input type="text" id="name" name="name"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                            required>
+                        <label for="first_name" class="block text-gray-700 text-sm font-bold mb-2 label-form">First
+                            Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="John"
+                            class="border border-gray-300 rounded-md py-2 px-4 w-full focus:outline-none focus:border-blue-400 form-field">
                     </div>
                     <div class="mb-4">
-                        <label for="surname" class="block text-gray-800">Surname</label>
-                        <input type="text" id="surname" name="surname"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                            required>
+                        <label for="last_name" class="block text-gray-700 text-sm font-bold mb-2 label-form">Last
+                            Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe"
+                            class="border border-gray-300 rounded-md py-2 px-4 w-full focus:outline-none focus:border-blue-400 form-field">
                     </div>
                     <div class="mb-4">
-                        <label for="email" class="block text-gray-800">Email</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                            required>
+                        <label for="country"
+                            class="block text-gray-700 text-sm font-bold mb-2 label-form">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Your Country"
+                            class="border border-gray-300 rounded-md py-2 px-4 w-full focus:outline-none focus:border-blue-400 form-field">
                     </div>
                     <div class="mb-4">
-                        <label for="phone" class="block text-gray-800">Phone Number</label>
-                        <input type="tel" id="phone" name="phone"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                            required>
-                    </div>
-
-                    <!-- Toggle for Entrepreneur/Talent -->
-                    <div class="mb-4">
-                        <label class="block text-gray-800">Who are you?</label>
-                        <div class="flex">
-                            <input type="radio" id="entrepreneur" name="role" value="entrepreneur" class="mr-2" checked>
-                            <label for="entrepreneur" class="mr-4">Entrepreneur</label>
-                            <input type="radio" id="talent" name="role" value="talent" class="mr-2">
-                            <label for="talent">Talent</label>
-                        </div>
-                    </div>
-
-                    <!-- Fields specific to Entrepreneurs -->
-                    <div id="entrepreneur-fields">
-                        <div class="mb-4">
-                            <label for="business-name" class="block text-gray-800">Business Name</label>
-                            <input type="text" id="business-name" name="business-name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
-                        </div>
-                        <div class="mb-4">
-                            <label for="business-sector" class="block text-gray-800">Business Sector</label>
-                            <input type="text" id="business-sector" name="business-sector"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
-                        </div>
-                        <div class="mb-4">
-                            <label for="business-maturity" class="block text-gray-800">Business Maturity</label>
-                            <select id="business-maturity" name="business-maturity"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
-                                <option value="startup">Startup</option>
-                                <option value="established">Established</option>
-                                <option value="growing">Growing</option>
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Fields specific to Talents -->
-                    <div id="talent-fields" style="display: none;">
-                        <div class="mb-4">
-                            <label for="skills" class="block text-gray-800">Skills</label>
-                            <select id="skills" name="skills"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                                multiple required>
-                                <option value="design">Design</option>
-                                <option value="development">Development</option>
-                                <option value="marketing">Marketing</option>
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                        <div class="mb-4">
-                            <label for="experience" class="block text-gray-800">Years of Experience</label>
-                            <input type="number" id="experience" name="experience"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="interests" class="block text-gray-800">Interests</label>
-                            <select id="interests" name="interests"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                                multiple required>
-                                <option value="art">Art</option>
-                                <option value="music">Music</option>
-                                <option value="technology">Technology</option>
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <input type="checkbox" id="whatsapp" name="whatsapp" value="yes" class="mr-2">
-                        <label for="whatsapp">My number is available on WhatsApp</label>
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 label-form">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com"
+                            class="border border-gray-300 rounded-md py-2 px-4 w-full focus:outline-none focus:border-blue-400 form-field">
                     </div>
                     <div class="mb-4">
-                        <button type="submit"
-                            class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition duration-300 submit">Join</button>
+                        <label for="phone_number" class="block text-gray-700 text-sm font-bold mb-2 label-form">Phone
+                            Number</label>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="123-456-7890"
+                            class="border border-gray-300 rounded-md py-2 px-4 w-full focus:outline-none focus:border-blue-400 form-field">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 label-form">Are you an entrepreneur or
+                            a talent?</label>
+                        <input type="checkbox" id="entrepreneur" name="role" value="entrepreneur">
+                        <label for="entrepreneur" class="mr-4">Entrepreneur</label>
+                        <input type="checkbox" id="talent" name="role" value="talent">
+                        <label for="talent">Talent</label>
+                    </div>
+                    <div class="mb-4">
+                        <label for="agree" class="block text-gray-700 text-sm font-bold mb-2 label-form">
+                            <input type="checkbox" id="agree" name="agree"> I agree to the terms and conditions
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit" class="text-white py-2 px-4 rounded-md">
+                            <span>Join Now</span>
+                        </button>
+                    </div>
+                    <div id="thankYouMessage" class="messagesubmit" style="display: none;">
+                        <p>Thank you for joining the community!</p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <!-- Social Media Icons (Left) -->
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-white mr-4 hover:text-blue-400">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="#" class="text-white mr-4 hover:text-blue-400">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="#" class="text-white hover:text-blue-400">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+
+
+            <!-- Copyright (Bottom Center) -->
+            <div class="text-center text-sm">
+                &copy; 2023 Pandorus. All rights reserved.
+            </div>
+
+            <!-- Newsletter Subscription (Right) -->
+            <div class="mb-4 md:mb-0">
+                <h4 class="text-xl font-semibold mb-2">Subscribe to our Newsletter</h4>
+                <form action="subscribe.php" method="POST" class="flex">
+                    <input type="email" name="email" placeholder="Your email"
+                        class="bg-gray-700 text-white rounded-l-md px-4 py-2 focus:outline-none">
+                    <button type="submit" class="text-white rounded-r-md px-4 py-2">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+
+
 
 
     <!-- Include JavaScript here if needed -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"; // Import Firestore
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAkRyANlpfX1pR5BAv0EVexGTXST4p3WSk",
+            authDomain: "cobuild-8a12e.firebaseapp.com",
+            projectId: "cobuild-8a12e",
+            storageBucket: "cobuild-8a12e.appspot.com",
+            messagingSenderId: "241867336537",
+            appId: "1:241867336537:web:94af4f93386f44c3a67a48",
+            measurementId: "G-M5JH56KFJ3"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Get a reference to Firestore
+        const db = getFirestore(app); // Use getFirestore to access Firestore
+
+        // Handle form submission
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            var formData = new FormData(this);
+
+            // Create an object to store the form data
+            var data = {};
+            formData.forEach(function (value, key) {
+                data[key] = value;
+            });
+
+            // Add the data to Firestore
+            addDoc(collection(db, "registrations"), data)
+                .then(function (docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                    // Clear the form
+                    document.getElementById("myForm").reset();
+                    // Display a thank you message
+                    document.getElementById("thankYouMessage").style.display = "block";
+                })
+                .catch(function (error) {
+                    console.error("Error adding document: ", error);
+                    // Handle errors here
+                });
+        });
+    </script>
 
 </body>
 
